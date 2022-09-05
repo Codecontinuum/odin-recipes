@@ -1,6 +1,15 @@
-name: HTML5Validator
-on: [push]    
-uses: Cyb3r-Jak3/html5validator-action
-with:
-    root: recipes/
-    blacklist: invalid
+name: HTML Check
+
+on:
+  push:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Checks HTML5
+      uses: Cyb3r-Jak3/html5validator-action@7.1.1
+      with:
+        root: recipes
