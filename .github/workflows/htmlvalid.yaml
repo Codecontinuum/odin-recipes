@@ -1,0 +1,6 @@
+name: HTML5Validator
+on: [push]    
+    uses: Cyb3r-Jak3/html5validator-action
+    with:
+      root: recipes/
+      blacklist: invalid
