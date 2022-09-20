@@ -1,0 +1,54 @@
+/* Resetting Global to box-sizing method & misc */
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit
+}
+
+/* Set responsive background image */
+body {
+    background-image: url(../images/index-background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+    body {
+        background-image: url(../images/index-background.jpg);
+    }
+}
+
+/* Creating flexbox navigation bar */
+header {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+#nav-title {
+    margin-left: 1rem;
+    margin-right: auto;
+    font-size: 1.5rem;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+header a {
+    text-decoration: none;
+}
